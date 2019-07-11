@@ -1,11 +1,21 @@
 {
   "name": "base-component-model",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": "zhangpj" ,
+  "description": "基于库模式的组件库模板" ,
+  "keywords": ["component", "lib", " vue"] ,
+  "files": [
+    "package",
+    "dist"
+  ] ,
+  "style": "dist/index.css",
+  "main": "package/index.js" ,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "serve": "vue-cli-service serve examples/main.js",
+    "build": "npm run dist",
+    "lint": "vue-cli-service lint",
+    "dist": "vue-cli-service build --target lib --name index --dest dist package/index.js"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -14,6 +24,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
     "@vue/cli-plugin-eslint": "^3.9.0",
+    "babel-plugin-component": "^1.1.1",
     "@vue/cli-service": "^3.9.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",

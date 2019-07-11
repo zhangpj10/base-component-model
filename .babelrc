@@ -1,0 +1,11 @@
+{
+  "plugins": [
+    [
+      "component",
+      {
+        "libraryName": "base-component-model", // 组件库名字，需要和package.json里的name相同
+        "libDir": "package" // 存放组件的文件夹，默认为lib
+      }
+    ]
+  ]
+}
